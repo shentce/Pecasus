@@ -1,0 +1,9 @@
+C:\TestCode\SerialProcess\bin\Release\SerialProcess.dll
+C:\TestCode\SerialProcess\bin\Release\SerialProcess.pdb
+C:\TestCode\SerialProcess\bin\Release\InterfaceProcessor.dll
+C:\TestCode\SerialProcess\bin\Release\InterfaceProcessor.pdb
+C:\TestCode\SerialProcess\obj\Release\SerialProcess.csproj.AssemblyReference.cache
+C:\TestCode\SerialProcess\obj\Release\SerialProcess.csproj.CoreCompileInputs.cache
+C:\TestCode\SerialProcess\obj\Release\SerialProcess.csproj.CopyComplete
+C:\TestCode\SerialProcess\obj\Release\SerialProcess.dll
+C:\TestCode\SerialProcess\obj\Release\SerialProcess.pdb
