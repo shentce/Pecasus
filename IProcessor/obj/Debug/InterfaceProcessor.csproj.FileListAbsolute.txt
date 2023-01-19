@@ -1,0 +1,6 @@
+C:\TestCode\IProcessor\bin\Debug\InterfaceProcessor.dll
+C:\TestCode\IProcessor\bin\Debug\InterfaceProcessor.pdb
+C:\TestCode\IProcessor\obj\Debug\InterfaceProcessor.csproj.CoreCompileInputs.cache
+C:\TestCode\IProcessor\obj\Debug\InterfaceProcessor.dll
+C:\TestCode\IProcessor\obj\Debug\InterfaceProcessor.pdb
+C:\TestCode\IProcessor\obj\Debug\InterfaceProcessor.csproj.AssemblyReference.cache
