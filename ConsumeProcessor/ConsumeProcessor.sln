@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InterfaceProcessor", "..\IP
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SerialProcess", "..\SerialProcess\SerialProcess.csproj", "{7BDCFC6B-0A16-49C9-836B-BFF273FEB064}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SerialProcessTest", "..\SerialProcessTest\SerialProcessTest.csproj", "{8C43D8FE-98CA-4035-863E-8AB658912786}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{7BDCFC6B-0A16-49C9-836B-BFF273FEB064}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7BDCFC6B-0A16-49C9-836B-BFF273FEB064}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7BDCFC6B-0A16-49C9-836B-BFF273FEB064}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8C43D8FE-98CA-4035-863E-8AB658912786}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C43D8FE-98CA-4035-863E-8AB658912786}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C43D8FE-98CA-4035-863E-8AB658912786}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C43D8FE-98CA-4035-863E-8AB658912786}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
