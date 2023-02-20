@@ -80,7 +80,7 @@ jobs:
 
     # Execute all unit tests in the solution
     - name: Test
-      run: dotnet test --no-restore --verbosity normal
+      run: VSTest.Console.EXE SerialProcessTest.dll --no-restore --verbosity normal
 
     # Restore the application to populate the obj folder with RuntimeIdentifiers
     - name: Restore the application
