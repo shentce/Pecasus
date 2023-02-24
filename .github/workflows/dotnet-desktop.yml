@@ -92,7 +92,7 @@ jobs:
        # pwsh -command ". '{0}'" 
       shell: pwsh
       run: |
-        .\build.sh
+        .\build.ps1
       
      # run: ./build.sh
       #msbuild $env:Solution_Name -t:rebuild -property:Configuration=Release
