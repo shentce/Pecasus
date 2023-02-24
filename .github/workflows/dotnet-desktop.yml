@@ -91,7 +91,7 @@ jobs:
     - name: Build solution
        # pwsh -command ". '{0}'" 
       run: ./build.sh
-        shell:pwsh
+        shell:bash
       
      # run: ./build.sh
       #msbuild $env:Solution_Name -t:rebuild -property:Configuration=Release
