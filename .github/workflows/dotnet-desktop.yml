@@ -89,8 +89,11 @@ jobs:
       #  Configuration: ${{ matrix.configuration }}
         
     - name: Build solution
-      shell: bash
+       # pwsh -command ". '{0}'" 
       run: ./build.sh
+        shell:pwsh
+      
+     # run: ./build.sh
       #msbuild $env:Solution_Name -t:rebuild -property:Configuration=Release
 
     # Decode the base 64 encoded pfx and save the Signing_Certificate
