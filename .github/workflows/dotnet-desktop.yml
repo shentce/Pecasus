@@ -89,6 +89,7 @@ jobs:
       #  Configuration: ${{ matrix.configuration }}
         
     - name: Build solution
+      shell: bash
       run: ./build.sh
       #msbuild $env:Solution_Name -t:rebuild -property:Configuration=Release
 
