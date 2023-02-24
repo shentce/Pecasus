@@ -370,9 +370,9 @@ else
 				ls -goh "ApplicationPackages"
 			fi
 		fi
-	} 2>&1 
+	}  
 	
-	#| tee "${BUILD_LOG_FILE}"
+	#2>&1| tee "${BUILD_LOG_FILE}"
 
 	echo ""
 	EchoInColor "Build output logged to: ${BUILD_LOG_FILE}"
