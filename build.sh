@@ -223,6 +223,7 @@ if [ $# -eq 0 ]; then
 	echo ""
 	exit 1
 else
+	echo -e "Testing"
 	POSITIONAL=()
 	dateStr=$(date '+%Y-%m-%d_%H%M%S')
 	BUILD_LOG_FILE="build-output_${dateStr}.log"
