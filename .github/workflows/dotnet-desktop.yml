@@ -90,7 +90,7 @@ jobs:
         
     - name: Build solution
       run: |
-           ./build.sh --automation-mode --ivi  
+           ./build.sh --ivi  
       #msbuild $env:Solution_Name -t:rebuild -property:Configuration=Release
 
     # Decode the base 64 encoded pfx and save the Signing_Certificate
