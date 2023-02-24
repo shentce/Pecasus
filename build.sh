@@ -192,7 +192,7 @@ TestIviInterface()
 
 BuildIvi()
 {
-	local slnFile="CommonCoreIvi.IVI.Interop.sln"
+	local slnFile="ConsumeProcessor/ConsumeProcessor.sln"
 	BuildSolution "${slnFile}"
 }
 
