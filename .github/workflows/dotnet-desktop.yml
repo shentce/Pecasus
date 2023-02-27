@@ -88,11 +88,12 @@ jobs:
      # env:
       #  Configuration: ${{ matrix.configuration }}
         
-    - name: Build solution
-       # pwsh -command ". '{0}'" 
-      shell: pwsh
+    - name: Build CCAF applications and libraries
       run: |
-        .\build.ps
+        echo "Hello"
+        ./build.sh --automation-mode --ivi-interface   
+        echo "end"
+      shell: pwsh
       
      # run: ./build.sh
       #msbuild $env:Solution_Name -t:rebuild -property:Configuration=Release
