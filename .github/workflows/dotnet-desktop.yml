@@ -88,10 +88,16 @@ jobs:
      # env:
       #  Configuration: ${{ matrix.configuration }}
         
+    - name: setup python
+        uses:actions/setup-python@v2
+      with:
+          python-version: 3.8 #install the python needed    
+        
     - name: Build CCAF applications and libraries
       run: |
         echo "Hello"
-        ./build.sh --automation-mode --ivi-interface   
+        # ./build.sh --automation-mode --ivi-interface   
+          python msbuilder.py
         echo "end"
       shell: pwsh
       
