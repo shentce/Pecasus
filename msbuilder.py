@@ -33,7 +33,19 @@
 #
 
 import os, shlex, subprocess, re, datetime	
-		
+
+def main():
+     	proj = r'path to project (.csproj)'
+    	test = r'path to project containing test (.csproj)'
+    	nuspec = r'path to nuspec definition (.nuspec)'
+
+     	msbuild = r'C:\Windows\Microsoft.NET\Framework\v4.0.30319\MSBuild.exe'
+     	mstest = r'C:\Program Files (x86)\Microsoft Visual Studio 10.0\Common7\IDE\MSTest.exe'
+     	nuget = r'C:\BuildTools\nuget\2199eada12ce\nuget.exe'
+     	trx2html = r'C:\BuildTools\trx2html\0.6\trx2html.exe'
+     	bld = MsBuilder(msbuild=msbuild, mstest=mstest, nuget=nuget, trx2html=trx2html)
+	bld.build('C:\TestCode\IProcessor\InterfaceProcessor.csproj')
+
 class MsBuilder:
 	def __init__(self, msbuild=None, mstest=None, nuget=None, trx2html=None):
 		# The following dictionary holds the location of the various
