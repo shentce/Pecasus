@@ -144,13 +144,13 @@ jobs:
         server_address: smtp.gmail.com
         server_port: 465
         # user credentials
-        username: "shentce"
+        username: "shentce@gmail.com"
         password: "Dare@TouchMe2704"
         # email subject
         subject: ${{ github.job }} job of ${{ github.repository }} has ${{ job.status }}
         # email body as text
-        body: ${{ github.job }} job in worflow ${{ github.workflow }} of ${{ github.repository }} has ${{ job.status }}
+        body: ${{ github.job }} job in worflow ${{ github.workflow }} of ${{ github.repository }} has ${{ job.status }} - Test
         # comma-separated string, send email to
-        to: abc@gmail.com,xyz@gmail.com
+        to: shentce@gmail.com
         # from email name
-        from: XYZ
+        from: shentce@gmail.com
