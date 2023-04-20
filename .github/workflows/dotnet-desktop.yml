@@ -40,8 +40,8 @@ name: .NET Core Desktop
 
 on:
   workflow_dispatch:
- # push:
- #   branches: [ "main" ]
+  push:
+    branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
 
@@ -53,7 +53,7 @@ jobs:
       matrix:
         configuration: [Release]
 
-    runs-on: windows-latest #self-hosted  # For a list of available runner types, refer to
+    runs-on: self-hosted  # For a list of available runner types, refer to
                              # https://help.github.com/en/actions/reference/workflow-syntax-for-github-actions#jobsjob_idruns-on
 
     env:
@@ -69,40 +69,45 @@ jobs:
         fetch-depth: 0
 
     # Install the .NET Core workload
- #   - name: Install .NET Core
-  #    uses: actions/setup-dotnet@v3
-  #    with:
-    #    dotnet-version: 6.0.x
+    - name: Install .NET Core
+      uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: 6.0.x
 
     # Add  MSBuild to the PATH: https://github.com/microsoft/setup-msbuild
-   # - name: Setup MSBuild.exe
-    #  uses: microsoft/setup-msbuild@v1.0.2
+    - name: Setup MSBuild.exe
+      uses: microsoft/setup-msbuild@v1.0.2
 
     # Execute all unit tests in the solution
     #- name: Test
      # run: VSTest.Console.EXE SerialProcessTest.dll --no-restore --verbosity normal
 
     # Restore the application to populate the obj folder with RuntimeIdentifiers
-   # - name: Restore the application
-    #  run: msbuild $env:Solution_Name /t:Restore /p:Configuration=$env:Configuration
-     # env:
-      #  Configuration: ${{ matrix.configuration }}
+    - name: Restore the application
+      run: msbuild $env:Solution_Name /t:Restore /p:Configuration=$env:Configuration
+      env:
+       Configuration: ${{ matrix.configuration }}
         
-    - name: setup python
-        uses:actions/setup-python@v2
-      with:
-          python-version: 3.8 #install the python needed    
+     # run: build the applicatioin
+    - name: build the application
+      run: msbuild $env:Solution_Name /t:build /p:Configuration=$env:Configuration
+      env:
+       Configuration: ${{ matrix.configuration }}
+    
+    #- name: setup python
+    #    uses:actions/setup-python@v2
+    #  with:
+    #      python-version: 3.8 #install the python needed    
         
-    - name: Build CCAF applications and libraries
-      run: |
-        echo "Hello"
-        # ./build.sh --automation-mode --ivi-interface   
-          python msbuilder.py
-        echo "end"
-      shell: pwsh
+    #- name: Build CCAF applications and libraries
+    #  run: |
+    #    echo "Hello"
+    #    # ./build.sh --automation-mode --ivi-interface   
+    #     python msbuilder.py
+    #    echo "end"
+    #  shell: pwsh
       
-     # run: ./build.sh
-      #msbuild $env:Solution_Name -t:rebuild -property:Configuration=Release
+    
 
     # Decode the base 64 encoded pfx and save the Signing_Certificate
 #     - name: Decode the pfx
