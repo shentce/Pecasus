@@ -154,7 +154,7 @@ jobs:
 #         name: MSIX Package
 #         path: ${{ env.Wap_Project_Directory }}\AppPackages
 
-    - name: Send mail
+   # - name: Send mail
      # if: failure()
      # uses: dawidd6/action-send-mail@v2
      # with:
