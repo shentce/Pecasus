@@ -80,11 +80,11 @@ jobs:
          
       # To compare changes between the current commit and the last pushed remote commit set `since_last_remote_commit: true`. e.g
       
-    - name: List all changed files
-      run: |
-        for file in ${{ steps.changed-files.outputs.all_changed_files }}; do
-          echo "$file was changed"
-        done
+   # - name: List all changed files
+    #  run: |
+    #    for file in ${{ steps.changed-files.outputs.all_changed_files }}; do
+     #     echo "$file was changed"
+     #   done
 
     # Install the .NET Core workload
     - name: Install .NET Core
