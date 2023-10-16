@@ -69,14 +69,14 @@ jobs:
         fetch-depth: 0
         
     # Example 1
-    - name: Get changed files
-      id: changed-files
-      uses: tj-actions/changed-files@v35
-      with:
-         since_last_remote_commit: true 
-         input_path:  $GITHUB_WORKSPACE
-         files: |
-          $GITHUB_WORKSPACE
+   # - name: Get changed files
+   #   id: changed-files
+   #   uses: tj-actions/changed-files@v35
+    #  with:
+     #    since_last_remote_commit: true 
+      #   input_path:  $GITHUB_WORKSPACE
+       #  files: |
+        #  $GITHUB_WORKSPACE
          
       # To compare changes between the current commit and the last pushed remote commit set `since_last_remote_commit: true`. e.g
       
@@ -155,20 +155,20 @@ jobs:
 #         path: ${{ env.Wap_Project_Directory }}\AppPackages
 
     - name: Send mail
-      if: failure()
-      uses: dawidd6/action-send-mail@v2
-      with:
+     # if: failure()
+     # uses: dawidd6/action-send-mail@v2
+     # with:
         # mail server settings
-        server_address: smtp.gmail.com
-        server_port: 465
+      #  server_address: smtp.gmail.com
+       # server_port: 465
         # user credentials
-        username: "shentce"
-        password: "ctrgfrxhumwyyscg"
+       # username: "shentce"
+       # password: "ctrgfrxhumwyyscg"
         # email subject
-        subject: ${{ github.job }} job of ${{ github.repository }} has ${{ job.status }}
+       # subject: ${{ github.job }} job of ${{ github.repository }} has ${{ job.status }}
         # email body as text
-        body: ${{ github.job }} job in worflow ${{ github.workflow }} of ${{ github.repository }} has ${{ job.status }} - Test
+       # body: ${{ github.job }} job in worflow ${{ github.workflow }} of ${{ github.repository }} has ${{ job.status }} - Test
         # comma-separated string, send email to
-        to: shentce@gmail.com
+        # to: shentce@gmail.com
         # from email name
-        from: shentce@gmail.com
+        # from: shentce@gmail.com
