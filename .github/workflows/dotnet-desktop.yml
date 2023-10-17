@@ -96,14 +96,6 @@ jobs:
     - name: Echo
       run: echo ${{ steps.get_changed.outputs.changed }}
 
-    - name: Email notify action step
-      id: email
-      uses: platform-chassis/send-email-action@latest
-      with:
-          email-list: 'shentce@gmail.com'
-          email-header: 'test mail'
-          email-body: 'test body'
-          email-format: 'html'
         
     # Example 1
    # - name: Get changed files
