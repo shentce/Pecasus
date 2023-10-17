@@ -17,3 +17,5 @@ namespace InterfaceProcessor
         Action<string> InvertMe { get; set; }
     }
 }
+
+
