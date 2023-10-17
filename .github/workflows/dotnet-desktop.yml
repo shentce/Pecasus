@@ -134,6 +134,9 @@ jobs:
       run: msbuild $env:Solution_Name /t:Restore /p:Configuration=$env:Configuration
       env:
        Configuration: ${{ matrix.configuration }}
+
+    - name: Echo
+      run: echo https://api.github.com/repos/${{github.owner}}/${{github.repository}}/actions/runs/${{ github.run_id }}/logs
         
      # run: build the applicatioin
     - name: build the application
