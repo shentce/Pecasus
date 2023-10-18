@@ -130,7 +130,7 @@ jobs:
        Configuration: ${{ matrix.configuration }}
 
     - name: logs
-      run: gh api /repos/your-org/your-repo/actions/runs/2116494763/logs > test.zip
+      run: gh api /repos/your-org/your-repo/actions/runs/${{ github.run_id }}/logs > test.zip
       env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
