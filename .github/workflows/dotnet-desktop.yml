@@ -130,7 +130,12 @@ jobs:
        Configuration: ${{ matrix.configuration }}
 
     - name: logs
-      run: gh api /repos/your-org/your-repo/actions/runs/2116494763/logs > test.zip
+      # run: gh api /repos/your-org/your-repo/actions/runs/2116494763/logs > test.zip
+      run: |
+        curl -LX GET 'https://api.github.com/repos/your-org/your-repo/actions/runs/2116494763/logs' \
+      --header 'Accept: application/vnd.github.v3+json' \
+      --header 'Authorization: Bearer xxx' \
+      -o logs.zip
 
     - name: Step 3 - Use the Upload Artifact GitHub Action
       uses: actions/upload-artifact@v2
