@@ -129,6 +129,9 @@ jobs:
       env:
        Configuration: ${{ matrix.configuration }}
 
+    - name: Install git CLI
+      run: winget install --id GitHub.cli
+
     - name: logs
       run: gh api -H "Accept:application/vnd.github+json" -H "X-GitHub-Api-Version:2022-11-28" /repos/shentce/TestProject/actions/runs/6570192460/logs >test.zip
      
