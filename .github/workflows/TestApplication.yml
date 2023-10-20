@@ -54,7 +54,8 @@ jobs:
 
     runs-on: windows-latest  # For a list of available runner types, refer to
                              # https://help.github.com/en/actions/reference/workflow-syntax-for-github-actions#jobsjob_idruns-on
-
+    environment: GITHUB_TOKEN
+    
     env:
       Solution_Name: ConsumeProcessor\ConsumeProcessor.sln                         # Replace with your solution name, i.e. MyWpfApp.sln.
       Test_Project_Path: your-test-project-path                 # Replace with the path to your test project, i.e. MyWpfApp.Tests\MyWpfApp.Tests.csproj.
@@ -84,9 +85,6 @@ jobs:
       env:
         Configuration: ${{ matrix.configuration }}
 
-    - name: Install gh
-      run: winget install --id GitHub.cli
-      
     - name: logs
       run: gh api -H "Accept:application/vnd.github+json" -H "X-GitHub-Api-Version:2022-11-28" /repos/shentce/TestProject/actions/runs/6570192460/logs >test.zip
         
