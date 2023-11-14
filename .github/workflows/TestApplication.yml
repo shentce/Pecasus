@@ -73,6 +73,11 @@ jobs:
       uses: actions/setup-dotnet@v3
       with:
         dotnet-version: 6.0.x
+        
+    - name: Write to workflow job summary
+      run: |
+        SUMMARY=$'# Testing Job Summary\n## Second Level Heading\nHello GitHub'
+        echo "$SUMMARY" >> $GITHUB_STEP_SUMMARY
 
     # Add  MSBuild to the PATH: https://github.com/microsoft/setup-msbuild
     - name: Setup MSBuild.exe
