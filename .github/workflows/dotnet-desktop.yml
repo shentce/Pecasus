@@ -46,17 +46,7 @@ on:
     branches: [ "main" ]
 
 jobs:
-
-  summarize:
-  
-    runs-on: self-hosted
-  
-    steps:
-    - name: Write to workflow job summary
-      run: |
-        SUMMARY=$'# Testing Job Summary\n## Second Level Heading\nHello GitHub'
-        echo "$SUMMARY" >> $GITHUB_STEP_SUMMARY
-          
+   
   build:
 
     strategy:
@@ -79,6 +69,10 @@ jobs:
       with:
         fetch-depth: 0
 
+    - name: Write to workflow job summary
+      run: |
+        echo "Test Application" >> $GITHUB_STEP_SUMMARY
+
     - name: Step 1 - Create a temporary artifact downloads folder
       run: mkdir downloads
     
@@ -89,11 +83,6 @@ jobs:
         echo 'bravo'    > bravo.html
         echo 'charlie'  > charlie.html
         cd ..
-
-    - name: Write to workflow job summary
-      run: |
-        SUMMARY=$'# Testing Job Summary\n## Second Level Heading\nHello GitHub'
-        echo "$SUMMARY" >> $GITHUB_STEP_SUMMARY
 
     - uses: Stockopedia/action-get-changed-files@v1
       id: get_changed
